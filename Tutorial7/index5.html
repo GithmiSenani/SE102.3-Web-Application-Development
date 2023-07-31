@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Table Border</title>
+</head>
+<body>
+  <h1>Table Border Changer</h1>
+  <button onclick="changeTableBorder()">Change Table Border</button>
+  <table id="myTable" style="border: 1px solid black;">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>30</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <td>Jane</td>
+      <td>25</td>
+      <td>Canada</td>
+    </tr>
+  </table>
+
+  <script>
+    function changeTableBorder() {
+      const table = document.getElementById('myTable');
+
+      // Check the current border style of the table
+      const currentBorderStyle = table.style.border;
+
+      // If the current border style is 'none' or empty, set it to '1px solid black'
+      if (currentBorderStyle === 'none' || currentBorderStyle === '') {
+        table.style.border = '1px solid black';
+      } else {
+        // Otherwise, remove the border by setting it to 'none'
+        table.style.border = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

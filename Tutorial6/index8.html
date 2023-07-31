@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student NIC Number</title>
+</head>
+<body>
+  <h1>Enter Student's NIC Number</h1>
+  <input type="text" id="nic-input" placeholder="e.g., 1234567890123">
+  <button onclick="getYearOfBirth()">Get Year of Birth</button>
+  <p id="year-of-birth"></p>
+
+  <script>
+    function getYearOfBirth() {
+      const nicNumber = document.getElementById('nic-input').value.trim();
+
+      // Check if the NIC number is valid (length should be 12 and it should contain only digits)
+      if (nicNumber.length !== 12 || !/^\d+$/.test(nicNumber)) {
+        alert('Invalid NIC number. Please enter a valid 12-digit number.');
+        return;
+      }
+
+      // Extract the birth year from the NIC number (2nd and 3rd digits)
+      const year = nicNumber.substr(3, 2);
+
+      // Determine the century (19 or 20) based on the 5th digit of the NIC number
+      const fifthDigit = parseInt(nicNumber.charAt(4), 10);
+      let centuryPrefix;
+      if (fifthDigit < 5) {
+        centuryPrefix = '19';
+      } else {
+        centuryPrefix = '20';
+      }
+
+      const yearOfBirth = centuryPrefix + year;
+      document.getElementById('year-of-birth').innerText = `Year of Birth: ${yearOfBirth}`;
+    }
+  </script>
+</body>
+</html>

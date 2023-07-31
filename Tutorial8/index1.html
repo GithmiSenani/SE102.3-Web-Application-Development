@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Registration Form</title>
+</head>
+<body>
+<form action="/action_page.php">
+<h1>Registration Form</h1>
+<hr>
+<label for="first_name">First Name</label>
+<input type="text" name="first_name" id="first_name" required><br>
+<label for="last_name">Last Name</label>
+<input type="text" name="last_name" id="last_name" required><br>
+
+<label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+    <button type="submit">Submit</button><br>
+
+<label for="gender">Gender</label>
+<input type="radio" name="gender" id="male" value="male" checked>
+<label for="male">Male</label>
+<input type="radio" name="gender" id="female" value="female">
+<label for="female">Female</label><br>
+
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+      <option value="SL">Sri Lanka</option>
+      <option value="CAN">Canada</option>
+      <option value="UK">United Kingdom</option>
+      <option value="AUS">Australia</option>
+      <option value="GER">Germany</option>
+     
+    </select>
+    <button type="submit">Submit</button>
+ <br>
+<label for="email">Email</label>
+<input type="email" name="email" id="email" required><br>
+<label for="mobile_number">Phone</label>
+<input type="tel" name="mobile_number" id="mobile_number" required><br>
+<label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+
+    <label for="confirm-password">Confirm Password:</label>
+    <input type="password" id="confirm-password" name="confirm-password" required>
+    <button type="submit">Submit</button><br>
+<input type="checkbox" name="terms_and_conditions" id="terms_and_conditions" required>
+<label for="terms_and_conditions">I agree to the terms and conditions</label><br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+</body>
+</html>

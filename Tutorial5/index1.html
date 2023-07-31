@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+</head>
+<body>
+<form action="/action_page.php">
+<h1>Registration Form</h1>
+<hr>
+<label for="first_name">First Name</label>
+<input type="text" name="first_name" id="first_name" required><br>
+<label for="last_name">Last Name</label>
+<input type="text" name="last_name" id="last_name" required><br>
+<label for="mobile_number">Mobile Number</label>
+<input type="tel" name="mobile_number" id="mobile_number" required><br>
+<label for="gender">Gender</label>
+<input type="radio" name="gender" id="male" value="male" checked>
+<label for="male">Male</label>
+<input type="radio" name="gender" id="female" value="female">
+<label for="female">Female</label><br>
+<label for="email">Email</label>
+<input type="email" name="email" id="email" required><br>
+<label for="favourite_music">Favourite Music</label>
+<select name="favourite_music" id="favourite_music"><br>
+<option value="pop">Pop</option>
+<option value="rock">Rock</option>
+<option value="other">Other</option>
+</select><br>
+<label for="additional_details">Additional Details</label>
+<textarea name="additional_details" id="additional_details"></textarea><br>
+<label for="terms_and_conditions">I agree to the terms and conditions</label><br>
+<input type="checkbox" name="terms_and_conditions" id="terms_and_conditions" required>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+</body>
+</html>

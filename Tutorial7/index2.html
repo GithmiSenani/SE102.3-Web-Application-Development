@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enable/Disable Video Playback</title>
+</head>
+<body>
+  <h1>Mouse Over the Video to Play</h1>
+  <video id="video" width="640" height="360" controls>
+    <source src="NSBM Green University.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    const video = document.getElementById('video');
+
+    video.addEventListener('mouseover', playVideo);
+    video.addEventListener('mouseout', pauseVideo);
+
+    function playVideo() {
+      video.play();
+    }
+
+    function pauseVideo() {
+      video.pause();
+    }
+  </script>
+</body>
+</html>

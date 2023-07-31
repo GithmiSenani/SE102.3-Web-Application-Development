@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mathematical Operations</title>
+</head>
+<body>
+  <h1>Mathematical Operations</h1>
+  <button onclick="performMathOperation('add')">Addition</button>
+  <button onclick="performMathOperation('subtract')">Subtraction</button>
+  <button onclick="performMathOperation('divide')">Division</button>
+  <button onclick="performMathOperation('multiply')">Multiplication</button>
+
+  <script>
+    function performMathOperation(operation) {
+      let num1 = parseFloat(prompt('Enter the first number:'));
+      let num2 = parseFloat(prompt('Enter the second number:'));
+
+      if (isNaN(num1) || isNaN(num2)) {
+        alert('Invalid input. Please enter valid numbers.');
+        return;
+      }
+
+      let result;
+      switch (operation) {
+        case 'add':
+          result = num1 + num2;
+          break;
+        case 'subtract':
+          result = num1 - num2;
+          break;
+        case 'divide':
+          if (num2 === 0) {
+            alert('Division by zero is not allowed.');
+            return;
+          }
+          result = num1 / num2;
+          break;
+        case 'multiply':
+          result = num1 * num2;
+          break;
+        default:
+          alert('Invalid operation selected.');
+          return;
+      }
+
+      alert(`The result of ${num1} ${getOperationSymbol(operation)} ${num2} is: ${result}`);
+    }
+
+    function getOperationSymbol(operation) {
+      switch (operation) {
+        case 'add':
+          return '+';
+        case 'subtract':
+          return '-';
+        case 'divide':
+          return '/';
+        case 'multiply':
+          return '*';
+        default:
+          return '';
+      }
+    }
+  </script>
+</body>
+</html>
